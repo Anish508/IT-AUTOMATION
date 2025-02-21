@@ -1,0 +1,62 @@
+Regular expressions:
+also known as regx
+
+Allow us to search a text for strings matching a specific pattern
+grep is most popular tool to matching regx
+
+anish@LAPTOP-21PRUEIQ:/mnt/e/dict$ grep thon word.txt
+Marathon
+Marathon's
+Python
+Python's
+telethon
+thong
+thong's
+thongs
+
+anish@LAPTOP-21PRUEIQ:/mnt/e/dict$ grep -i python word.txt
+Python
+
+the circumflex and the dollar sign specificaly match the start and end of line or string
+
+character classes
+
+A shell is a command line interface used to communicate with os 
+
+popularly used shells are bash, fish, zsh
+
+#!/usr/bin/env python3
+import os
+print("HOME: " + os.environ.get("HOME", ""))
+print("SHELL: " + os.environ.get("SHELL", ""))
+print("FRUIT: " + os.environ.get("FRUIT", ""))
+anish@LAPTOP-21PRUEIQ:~$ chmod +x variable.py
+anish@LAPTOP-21PRUEIQ:~$ ./variable.py
+HOME: /home/anish
+SHELL: /bin/bash
+FRUIT:
+
+//using export command
+anish@LAPTOP-21PRUEIQ:~$ export FRUIT=pineapple
+anish@LAPTOP-21PRUEIQ:~$ ./variable.py
+HOME: /home/anish
+SHELL: /bin/bash
+FRUIT: pineapple
+
+//Command line args
+#!/usr/bin/env python3
+import sys
+print(sys.argv)
+
+anish@LAPTOP-21PRUEIQ:~$ chmod +x parameter.py
+anish@LAPTOP-21PRUEIQ:~$ ./parameter.py
+['./parameter.py']
+anish@LAPTOP-21PRUEIQ:~$ ./parameter.py one two three
+['./parameter.py', 'one', 'two', 'three']
+
+anish@LAPTOP-21PRUEIQ:~$ wc create_file.py
+ 13  28 263 create_file.py
+anish@LAPTOP-21PRUEIQ:~$ echo $?
+0
+//wc command prints lines, words and characters
+echo $? this shows prgram exit value eithr 0 or 1 if unscucessful
